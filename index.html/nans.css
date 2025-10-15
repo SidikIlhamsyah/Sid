@@ -1,0 +1,111 @@
+/* Gaya dasar untuk body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: blue;
+    background-image: url(https://cdn.motor1.com/images/mgl/z68O7/s3/bmw-m4-competition-mint-green.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/* Gaya untuk header dan navbar */
+header {
+    background-color: navy;
+    color: white;
+    padding-top: 20px;
+    padding-bottom:10px;
+    text-align: center;
+    font-size: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    border-radius: 5px;
+}
+
+/* Gaya untuk container flex */
+.container {
+    display: flex; /* Menggunakan flexbox */
+    padding: 20px;
+}
+
+.sidebar {
+    flex: 1; /* Mengambil sebagian lebar */
+    margin-right: 20px; /* Jarak dari konten utama */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar img {
+    display: block;
+    margin: 10px auto; /* Pusatkan gambar di sidebar */
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    max-width: 100%; /* Responsif */
+    height: auto;
+}
+
+main {
+    flex: 3; /* Mengambil lebih banyak lebar untuk konten utama */
+}
+
+section {
+    margin-bottom: 20px; /* Jarak antar section */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 50px 200px 100px rgba(0, 0, 50, 0.1);
+}
+
+section h2 {
+    color: white;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+section p {
+    font-size: 25px;
+    color: red;
+    line-height: 1.6;
+}
+
+/* Responsif untuk perangkat mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Ubah ke vertikal pada layar kecil */
+    }
+    .sidebar {
+        margin-right: 0;
+        margin-bottom: 20px; /* Jarak di bawah sidebar */
+    }
+}
+footer {
+    background-color: navy;  /* Warna latar belakang serupa dengan header */
+    color: yellow;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;  /* Agar tetap di bagian bawah */
+    width: 100%;
+    bottom: 0;
+}
